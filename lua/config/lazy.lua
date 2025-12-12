@@ -25,14 +25,14 @@ require("lazy").setup({
     { import = "lazyvim.plugins.extras.lang.json" },
 
     -- Disable LazyVim mini.icons to avoid conflicts
-    { "echasnovski/mini.icons", enabled = false },
+    { "nvim-mini/mini.icons", enabled = false },
 
     -- =========================
     -- UI Plugins (icons, tree, bufferline)
     -- =========================
     {
       "nvim-tree/nvim-web-devicons",
-      lazy = false, -- load immediately
+      lazy = false,
       config = function()
         require("nvim-web-devicons").setup {
           default = true,
@@ -44,6 +44,7 @@ require("lazy").setup({
       "nvim-tree/nvim-tree.lua",
       dependencies = { "nvim-tree/nvim-web-devicons" },
       opts = {
+        view = { side = "right" }, -- NvimTree on the RIGHT
         renderer = {
           icons = {
             show = {
@@ -72,6 +73,21 @@ require("lazy").setup({
       },
       config = function(_, opts)
         require("bufferline").setup(opts)
+      end,
+    },
+
+    -- =========================
+    -- Auto-save Plugin
+    -- =========================
+    {
+      "Pocco81/auto-save.nvim",
+      config = function()
+        require("auto-save").setup({
+          enabled = true,
+          trigger_events = { "InsertLeave", "TextChanged" },
+          write_all_buffers = false,
+          debounce_delay = 135,
+        })
       end,
     },
 
@@ -224,4 +240,23 @@ require("lazy").setup({
     },
   },
 })
+
+-- =========================
+-- LSP Diagnostics (live updates)
+-- =========================
+vim.diagnostic.config({
+  virtual_text = {
+    prefix = "●",
+    spacing = 2,
+  },
+  signs = true,
+  underline = true,
+  update_in_insert = true,  -- live errors while typing
+  severity_sort = true,
+})
+
+-- Keymaps for diagnostics
+vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, { desc = "Show diagnostics" })
+vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Previous diagnostic" })
+vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "Next diagnostic" })
 
