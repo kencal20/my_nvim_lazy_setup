@@ -69,7 +69,7 @@ This repository contains my **personal Neovim configuration** optimized for **Re
 1. **Clone this repository**:
 
 ```bash
-git clone https://github.com/kencal20/my_nvim_lazy_setup.git ~/.config/nvim
+git clone https://github.com/kencal20/nvim_lazy_setup.git ~/.config/nvim
 ```
 
 2. **Install Neovim** (v0.9+ recommended).
