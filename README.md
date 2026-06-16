@@ -1,249 +1,327 @@
-# 💤 LazyVim Neovim Setup
+# ⚡ LazyVim Pro Development Environment
 
-![LazyVim startup screen](assets/lazy.png)
+<div align="center">
 
-A personal Neovim configuration optimized for **React**, **TypeScript**, **Python**, and general development. Built on [LazyVim](https://github.com/LazyVim/LazyVim) with [Lazy.nvim](https://github.com/folke/lazy.nvim) for modular plugin management.
+<img src="assets/lazy.png" alt="LazyVim Dashboard" width="1000"/>
 
----
+# 🚀 Modern Neovim Development Workspace
 
-## Table of Contents
+### Fast • Beautiful • Fully Configured • Production Ready
 
-- [Overview](#overview)
-- [Core Plugins](#core-plugins)
-- [Language Support](#language-support)
-- [Editor Features](#editor-features)
-- [Navigation & Keybindings](#navigation--keybindings)
-- [Fuzzy Finder](#fuzzy-finder)
-- [LSP & Development Tools](#lsp--development-tools)
-- [Snippets](#snippets)
-- [Status Line](#status-line)
-- [Markdown Preview](#markdown-preview)
-- [Installation](#installation)
-- [Configuration Notes](#configuration-notes)
-- [Contributing](#contributing)
-- [References](#references)
+Built on **LazyVim** with a carefully crafted developer experience for modern web and backend development.
 
----
+<br>
 
-## Overview
+![Neovim](https://img.shields.io/badge/Neovim-0.11+-57A143?style=for-the-badge\&logo=neovim\&logoColor=white)
+![LazyVim](https://img.shields.io/badge/LazyVim-Powered-blue?style=for-the-badge)
+![LSP](https://img.shields.io/badge/LSP-Configured-success?style=for-the-badge)
+![Treesitter](https://img.shields.io/badge/Treesitter-Enabled-orange?style=for-the-badge)
+![Git](https://img.shields.io/badge/Git-Integrated-red?style=for-the-badge\&logo=git\&logoColor=white)
+![Platform](https://img.shields.io/badge/Linux-macOS-Windows-purple?style=for-the-badge)
 
-This configuration is designed for fast, productive development in modern web and backend languages. It includes:
+<br><br>
 
-- LSP support for TypeScript, JavaScript, Python, HTML, CSS, JSON
-- Auto-completion with emoji support
-- Live diagnostics and error reporting
-- Treesitter syntax highlighting and code folding
-- File explorer and bufferline for efficient navigation
-- Web-based Markdown preview for documentation editing
-- Auto-save functionality
+<a href="#-features">Features</a> • <a href="#-requirements--downloads">Requirements</a> • <a href="#-installation">Installation</a> • <a href="#-keybindings">Keybindings</a> • <a href="#-language-support">Languages</a> • <a href="#-included-plugin-ecosystem">Plugins</a>
+
+</div>
 
 ---
 
-## Core Plugins
+## ✨ Why This Setup?
 
-| Plugin | Purpose |
-|--------|---------|
-| [LazyVim](https://github.com/LazyVim/LazyVim) | Modular Neovim framework |
-| [Lazy.nvim](https://github.com/folke/lazy.nvim) | Lazy-loading plugin manager |
-| [nvim-tree.lua](https://github.com/nvim-tree/nvim-tree.lua) | File explorer (right side) |
-| [bufferline.nvim](https://github.com/akinsho/bufferline.nvim) | Buffer tabs in slanted style |
-| [nvim-web-devicons](https://github.com/nvim-tree/nvim-web-devicons) | File type icons |
-| [auto-save.nvim](https://github.com/Pocco81/auto-save.nvim) | Automatic file saving |
-| [trouble.nvim](https://github.com/folke/trouble.nvim) | Diagnostics panel |
-| [nvim-cmp](https://github.com/hrsh7th/nvim-cmp) | Auto-completion engine |
+Forget spending hours configuring Neovim.
 
----
+This setup delivers a complete development environment out of the box:
 
-## Language Support
+✅ Intelligent LSP Support
 
-### LSP Servers
+✅ Automatic Formatting
 
-| Language | Server |
-|----------|--------|
-| TypeScript/JavaScript | `ts_ls` (tsserver) |
-| Python | `pyright` |
-| HTML | `html` |
-| CSS | `cssls` |
-| JSON | `jsonls` |
-| TailwindCSS | `tailwindcss` |
+✅ Git Integration
 
-### Treesitter Parsers
+✅ Fast File Navigation
 
-Installed parsers for enhanced syntax highlighting and code folding:
+✅ Markdown Preview
 
+✅ Auto Save
+
+✅ Modern UI
+
+✅ Optimized Startup Performance
+
+✅ Preconfigured Development Workflow
 
 ---
 
-## Editor Features
+# 🎯 Features
 
-### Auto-save
+<table>
+<tr>
+<td width="50%">
 
-- Automatically saves files on leaving insert mode or after text changes
-- Does not interfere with LSP diagnostics
+### ⚡ Lightning Fast
 
-### Completion
+Lazy-loaded plugins powered by Lazy.nvim.
 
-- `nvim-cmp` with emoji support
-- Snippet integration with LuaSnip
+### 🧠 Smart Code Intelligence
 
-### Diagnostics
+Full LSP ecosystem with autocompletion, diagnostics, refactoring, and code actions.
 
-- Live inline error messages with virtual text
-- Gutter signs for errors and warnings
-- Underlines for diagnostic highlights
-- Severity sorting for better readability
+### 🔍 Powerful Search
 
-### Formatting
+Instant file and content discovery using Telescope + Ripgrep.
 
-| File Type | Formatter |
-|-----------|-----------|
-| Lua | stylua |
-| JavaScript/TypeScript | prettier |
-| Shell | shfmt |
-| Markdown | markdownlint |
+</td>
 
-> **Note**: Python formatting (black) has been removed due to installation issues.
+<td width="50%">
 
----
+### 🌳 Beautiful UI
 
-## Navigation & Keybindings
+Modern dashboard, icons, statusline, tabs, and clean layouts.
 
-![Which-key popup showing leader key shortcuts](assets/which_key_prop.png)
+### 🔄 Automatic Saving
 
+Never lose your work again.
 
-**Leader key** is set to **Space** by default.
+### 🌐 Markdown Preview
 
-### Diagnostics Navigation
+Live browser rendering while writing documentation.
 
-| Key | Action |
-|-----|--------|
-| `<leader>e` | Show floating diagnostic window |
-| `[d` | Go to previous diagnostic |
-| `]d` | Go to next diagnostic |
-| `<C-n>` | Toggle Trouble diagnostics panel |
-
-### General Navigation
-
-| Key | Action |
-|-----|--------|
-| `<leader>f` | Format current file |
-| `<leader>v` | Toggle Markdown preview (browser-based) |
+</td>
+</tr>
+</table>
 
 ---
 
-## Fuzzy Finder
+# 📸 Preview
 
-**[Telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)** for fast file and content searching.
+<div align="center">
 
-| Key | Action |
-|-----|--------|
-| `<leader>fp` | Find project/plugin files |
-| `<leader>fs` | Search project content (live grep) |
+<img src="assets/lazy.png" alt="Preview" width="1000"/>
 
----
-
-## LSP & Development Tools
-
-### Mason.nvim
-
-Ensures essential development tools are automatically installed:
-
-| Tool | Purpose |
-|------|---------|
-| stylua | Lua formatter |
-| prettier | JavaScript/TypeScript formatter |
-| shfmt | Shell script formatter |
-| markdownlint | Markdown linting |
-
-### Mason-lspconfig
-
-Automatically configures installed LSP servers:
-
-
+</div>
 
 ---
 
-## Snippets
+# 🛠 Included Tools
 
-- **[LuaSnip](https://github.com/L3MON4D3/LuaSnip)** - Snippet engine
-- **[friendly-snippets](https://github.com/rafamadriz/friendly-snippets)** - VS Code-style snippet collection
-
-Snippets are automatically loaded and available for all supported file types.
-
----
-
-## Status Line
-
-**[Lualine.nvim](https://github.com/nvim-lualine/lualine.nvim)** with:
-
-- Mode indicator
-- File type with icon
-- Git branch and status
-- File location (line/column)
-- Emoji indicator for personality
+| Tool          | Description             |
+| ------------- | ----------------------- |
+| ⚡ Lazy.nvim   | Plugin Manager          |
+| 🎨 LazyVim    | Configuration Framework |
+| 🌳 Nvim Tree  | File Explorer           |
+| 📑 Bufferline | Buffer Navigation       |
+| 📊 Lualine    | Status Line             |
+| 🔍 Telescope  | Fuzzy Finder            |
+| 🚨 Trouble    | Diagnostics Viewer      |
+| 🌿 LazyGit    | Git Interface           |
+| 🔀 Diffview   | Git Diff Viewer         |
+| 🎯 Formatter  | Formatting              |
+| 💾 Auto Save  | Automatic Saving        |
 
 ---
 
-## Markdown Preview
+# 🌐 Language Support
 
-**[markdown-preview.nvim](https://github.com/iamcco/markdown-preview.nvim)** - Web-based live preview
-
-### Features
-
-- Toggle with `<leader>v` (single keypress, like VS Code)
-- Live updates as you edit
-- Full CSS/HTML rendering (not just terminal text)
-- Opens in your default browser
-
-### Requirements
-
-- Node.js (v16+ recommended)
-
-### Usage
-
-1. Open a `.md` file in Neovim
-2. Press `<leader>v`
-3. Browser opens with live preview
-4. Edit your Markdown - preview updates automatically
-5. Press `<leader>v` again to close
+| Language    | LSP          | Formatting   | Treesitter |
+| ----------- | ------------ | ------------ | ---------- |
+| TypeScript  | ts_ls        | Prettier     | ✅          |
+| JavaScript  | ts_ls        | Prettier     | ✅          |
+| Python      | Pyright      | Ruff / Black | ✅          |
+| Bash        | bashls       | shfmt        | ✅          |
+| TailwindCSS | tailwindcss  | Built-In     | ✅          |
+| HTML        | html         | Prettier     | ✅          |
+| CSS         | cssls        | Prettier     | ✅          |
+| JSON        | jsonls       | Prettier     | ✅          |
+| Lua         | lua_ls       | Stylua       | ✅          |
+| Markdown    | markdownlint | markdownlint | ✅          |
 
 ---
 
-## Installation
+# ⌨️ Keybindings
 
-### Prerequisites
+### 🚨 Diagnostics
 
-- Neovim v0.11 or higher
-- Git
-- Node.js & npm (for Markdown preview and TypeScript)
-- A Nerd Font (for icons)
+| Shortcut    | Action              |
+| ----------- | ------------------- |
+| `<leader>e` | Diagnostic Popup    |
+| `[d`        | Previous Diagnostic |
+| `]d`        | Next Diagnostic     |
+| `<C-n>`     | Toggle Trouble      |
 
-### Step 1: Clone the Repository
+### 💻 Development
+
+| Shortcut     | Action              |
+| ------------ | ------------------- |
+| `<leader>f`  | Format Current File |
+| `<leader>gg` | Open LazyGit        |
+| `<leader>gd` | Toggle Diffview     |
+| `<leader>fp` | Find Files          |
+| `<leader>fs` | Live Grep           |
+| `<leader>v`  | Markdown Preview    |
+
+---
+
+# 📦 Requirements & Downloads
+
+Install these dependencies before launching Neovim.
+
+| Tool         | Purpose          | Download                                                      |
+| ------------ | ---------------- | ------------------------------------------------------------- |
+| Neovim 0.11+ | Editor           | [Download](https://neovim.io/)                                |
+| Node.js 16+  | LSP & Plugins    | [Download](https://nodejs.org/)                               |
+| Python 3.x   | Python Support   | [Download](https://www.python.org/downloads/)                 |
+| Nerd Fonts   | Icons Support    | [Download](https://www.nerdfonts.com/font-downloads)          |
+| Git          | Version Control  | [Download](https://git-scm.com/downloads)                     |
+| LazyGit      | Git UI           | [Download](https://github.com/jesseduffield/lazygit/releases) |
+| Ripgrep      | Telescope Search | [Download](https://github.com/BurntSushi/ripgrep/releases)    |
+| fd           | Fast File Search | [Download](https://github.com/sharkdp/fd/releases)            |
+
+---
+
+## 🎨 Recommended Fonts
+
+* [JetBrains Mono Nerd Font](https://www.nerdfonts.com/font-downloads)
+* [FiraCode Nerd Font](https://www.nerdfonts.com/font-downloads)
+* [Hack Nerd Font](https://www.nerdfonts.com/font-downloads)
+* [Cascadia Code Nerd Font](https://www.nerdfonts.com/font-downloads)
+
+---
+
+# 🔌 Included Plugin Ecosystem
+
+## Core Framework
+
+* [LazyVim](https://www.lazyvim.org/)
+* [Lazy.nvim](https://github.com/folke/lazy.nvim)
+
+## UI
+
+* [Nvim Tree](https://github.com/nvim-tree/nvim-tree.lua)
+* [Bufferline](https://github.com/akinsho/bufferline.nvim)
+* [Lualine](https://github.com/nvim-lualine/lualine.nvim)
+
+## Search & Navigation
+
+* [Telescope](https://github.com/nvim-telescope/telescope.nvim)
+* [Ripgrep](https://github.com/BurntSushi/ripgrep)
+
+## Git
+
+* [LazyGit](https://github.com/jesseduffield/lazygit)
+* [Diffview](https://github.com/sindrets/diffview.nvim)
+
+## LSP & Development
+
+* [Mason.nvim](https://github.com/williamboman/mason.nvim)
+* [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)
+* [Treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
+
+## Formatting
+
+* [Conform.nvim](https://github.com/stevearc/conform.nvim)
+
+---
+
+# 🚀 Installation
+
+## Linux / macOS
 
 ```bash
-git clone h### Step 1: Clone the Repository
-
-```bash
-# Linux / macOS
 git clone https://github.com/kencal20/nvim_lazy_setup.git ~/.config/nvim
 
-# Windows (PowerShell or CMD)
-git clone https://github.com/kencal20/nvim_lazy_setup.git %LOCALAPPDATA%\nvimttps://github.com/kencal20/nvim_lazy_setup.git ~/.config/nvim
-
-Launch Nvim(in terminal)
 nvim
 ```
 
-## References
+## Windows
 
-| Plugin | Repository |
-|--------|------------|
-| LazyVim | [github.com/LazyVim/LazyVim](https://github.com/LazyVim/LazyVim) |
-| Lazy.nvim | [github.com/folke/lazy.nvim](https://github.com/folke/lazy.nvim) |
-| nvim-tree | [github.com/nvim-tree/nvim-tree.lua](https://github.com/nvim-tree/nvim-tree.lua) |
-| Telescope | [github.com/nvim-telescope/telescope.nvim](https://github.com/nvim-telescope/telescope.nvim) |
-| Treesitter | [github.com/nvim-treesitter/nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter) |
-| Mason | [github.com/williamboman/mason.nvim](https://github.com/williamboman/mason.nvim) |
-| markdown-preview | [github.com/iamcco/markdown-preview.nvim](https://github.com/iamcco/markdown-preview.nvim) |
-| LuaSnip | [github.com/L3MON4D3/LuaSnip](https://github.com/L3MON4D3/LuaSnip) |
-| Lualine | [github.com/nvim-lualine/lualine.nvim](https://github.com/nvim-lualine/lualine.nvim) |
+```powershell
+git clone https://github.com/kencal20/nvim_lazy_setup.git $env:LOCALAPPDATA\nvim
+
+nvim
+```
+
+---
+
+# 🔄 First Startup
+
+When Neovim launches for the first time:
+
+```text
+✔ Install Plugins
+✔ Install Mason Packages
+✔ Install Treesitter Parsers
+✔ Configure LSP Servers
+✔ Ready To Code
+```
+
+Restart Neovim after installation completes.
+
+---
+
+# 🏆 Ideal For
+
+### Frontend Development
+
+* React
+* Next.js
+* TypeScript
+* TailwindCSS
+
+### Backend Development
+
+* Python
+* Node.js
+* Bash
+
+### Documentation
+
+* Markdown
+* Technical Writing
+* Project Wikis
+
+---
+
+# 🎉 Developer Experience Included
+
+```text
+📁 Project Explorer
+⚡ Fast Startup
+🔍 Global Search
+🧠 Smart Completion
+🎯 Code Actions
+🌿 Git Integration
+🚨 Diagnostics
+💾 Auto Save
+📖 Markdown Preview
+🌳 Treesitter Highlighting
+```
+
+---
+
+# 🤝 Credits
+
+Built with ❤️ using:
+
+* LazyVim
+* Lazy.nvim
+* Neovim
+* Treesitter
+* Mason.nvim
+* Telescope.nvim
+* LazyGit
+* Diffview
+
+Special thanks to the Neovim community for creating one of the best developer ecosystems available today.
+
+---
+
+<div align="center">
+
+## ⭐ Star the Repository
+
+If this setup improves your workflow, consider giving the repository a star.
+
+### 🚀 Happy Coding!
+
+</div>
