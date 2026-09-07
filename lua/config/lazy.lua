@@ -1,5 +1,4 @@
 -- ~/.config/nvim/lua/config/lazy.lua
-
 -- Bootstrap lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
@@ -114,7 +113,10 @@ require("lazy").setup({
           "shfmt",
           "markdownlint",
           "shellcheck",
-          "bash-language-server", -- <- automatic install
+          "bash-language-server",
+          "ruff",          -- ← Python formatter + linter
+          -- "black",      -- alternative if you prefer black
+          -- "isort",      -- optional import sorter
         },
         auto_update = false,
         run_on_start = true,
@@ -166,6 +168,21 @@ require("lazy").setup({
             typescript = {
               function()
                 return { exe = "prettier", args = { "--stdin-filepath", vim.api.nvim_buf_get_name(0) }, stdin = true }
+              end,
+            },
+            -- ✅ Python formatter added
+            python = {
+              function()
+                return {
+                  exe = "ruff",
+                  args = {
+                    "format",
+                    "--stdin-filename",
+                    vim.api.nvim_buf_get_name(0),
+                    "-",
+                  },
+                  stdin = true,
+                }
               end,
             },
           },
@@ -233,7 +250,7 @@ end
 vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float)
 vim.keymap.set("n", "[d", vim.diagnostic.goto_prev)
 vim.keymap.set("n", "]d", vim.diagnostic.goto_next)
-vim.keymap.set("n", "<C-n>", function()
+vim.keymap.set("n", "<C-n", function()
   require("trouble").toggle("diagnostics")
 end)
 
