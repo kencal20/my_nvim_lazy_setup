@@ -86,7 +86,7 @@ require("lazy").setup({
           cssls = {},
           jsonls = {},
           bashls = {}, -- <- add bash LSP
-        }
+        },
       },
     },
 
@@ -114,7 +114,7 @@ require("lazy").setup({
           "markdownlint",
           "shellcheck",
           "bash-language-server",
-          "ruff",          -- ← Python formatter + linter
+          "ruff", -- ← Python formatter + linter
           -- "black",      -- alternative if you prefer black
           -- "isort",      -- optional import sorter
         },
@@ -250,7 +250,7 @@ end
 vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float)
 vim.keymap.set("n", "[d", vim.diagnostic.goto_prev)
 vim.keymap.set("n", "]d", vim.diagnostic.goto_next)
-vim.keymap.set("n", "<C-n", function()
+vim.keymap.set("n", "<C-n>", function()
   require("trouble").toggle("diagnostics")
 end)
 
